@@ -1,0 +1,61 @@
+{
+  "name": "namecheap-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "mocha test/index.ts",
+    "cover": "nyc npm t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerard2p/namecheap-api.git"
+  },
+  "keywords": [
+    "namecheap",
+    "node",
+    "javascript"
+  ],
+  "author": "Gerardo Pérez Pérez <gerard2perez@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gerard2p/namecheap-api/issues"
+  },
+  "homepage": "https://github.com/gerard2p/namecheap-api#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "xml2json": "^0.11.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^10.0.8",
+    "mocha": "^5.1.1",
+    "mocha-typescript": "^1.1.12",
+    "nyc": "^11.7.3",
+    "ts-node": "^6.0.3",
+    "typescript": "^2.8.3"
+  },
+  "nyc": {
+    "lines": 99,
+    "statements": 99,
+    "functions": 99,
+    "branches": 99,
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "cache": true,
+    "check-coverage": true,
+    "all": false,
+    "report-dir": "./coverage"
+  }
+}
