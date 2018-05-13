@@ -45,7 +45,6 @@ async function ManageApiRequest(namespace, command, ...args) {
         query = argtransform(...args);
     }
     let url = support_1.urlFormater(namespace, command, query);
-    console.log(url);
     let { ApiResponse: { Status, Errors, Warnings, CommandResponse } } = support_1.toJSON((await namecheap.get(url)).data);
     if (Status === 'OK') {
         console.log(CommandResponse);
